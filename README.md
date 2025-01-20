@@ -11,4 +11,4 @@ To install the modules you need node.js. You can get it from the [Node.js Websit
 To run the project use the command `npm run dev`.
 
 ### Building the project
-Because of the resource manager the project has to be manually built. In order to build it you need to remove the resource manager references and statically add the textures in the Maze.js file. Then you can use `npm build`. Finally you need to add the contents of the asset folder to the dist folder.
+Because of the resource manager the project has to be manually built. In order to build it you need to remove the resource manager references and statically add the textures in the Maze.js file. Then you can use `npm run build`. Finally you need to add the contents of the asset folder to the dist folder.
