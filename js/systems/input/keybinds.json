@@ -1,0 +1,65 @@
+{
+  "inputs": [
+    {
+      "name": "Reset",
+      "options": [
+        {
+          "type": "keyboard",
+          "key": "Enter"
+        }
+      ]
+    }
+  ],
+  "axis": [
+    {
+      "name": "Vertical",
+      "options": [
+        {
+          "type": "keyboard",
+          "positive": "KeyW",
+          "negative": "KeyS"
+        },
+        {
+          "type": "gamepad",
+          "positive": "",
+          "negative": "A1"
+        }
+      ]
+    },
+    {
+      "name": "Horizontal",
+      "options": [
+        {
+          "type": "keyboard",
+          "positive": "KeyA",
+          "negative": "KeyD"
+        },
+        {
+          "type": "gamepad",
+          "positive": "",
+          "negative": "A0"
+        }
+      ]
+    },
+    {
+      "name": "LookVertical",
+      "options": [
+        {
+          "type": "gamepad",
+          "positive": "",
+          "negative": "A3"
+        }
+      ]
+    },
+    {
+      "name": "LookHorizontal",
+      "options": [
+        {
+          "type": "gamepad",
+          "positive": "",
+          "negative": "A2"
+        }
+      ]
+    }
+  ]
+}
