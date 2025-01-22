@@ -1,3 +1,19 @@
+/* Variables */
+:root {
+	--text-color: rgb(247, 249, 253);
+	--text-color-light: rgb(213, 218, 218);
+	--text-color-dark: rgb(125, 128, 128);
+
+	--contrast-text-color: rgb(50, 52, 52);
+	--contrast-text-color-light: rgb(70, 72, 72);
+	--contrast-text-color-dark: rgb(29, 30, 30);
+
+	--accent-color: #0087f3;
+	--accent-color-light: #1694ff;
+	--accent-color-dark: #007fe7;
+}
+
+/* Basic Styles */
 @font-face {
     font-family: 'quicksand';
     src: url('../assets/fonts/Quicksand.ttf');
@@ -130,3 +146,100 @@ canvas {
 	z-index: -1;
 	position: absolute;
 }
+
+/* Win Screens */
+#endBackdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 101vw;
+	height: 101vh;
+	background-color: rgba(0, 0, 0, 0.62);
+	z-index: 4;
+}
+
+#winScreen, #trueWinScreen {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	z-index: 5;
+	background-color: var(--contrast-text-color);
+	border-radius: 1rem;
+	padding: 1rem;
+}
+
+#winScreen h1, #trueWinScreen h1 {
+	font-family: shareTechMono, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+.buttonHolder {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+}
+
+/* Button Style */
+.button,
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;
+	height: 38px;
+	padding: 0 1rem;
+	color: #555;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 38px;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	background-color: transparent;
+	border-radius: 2rem / 2rem;
+	border: 1px solid #bbb;
+	cursor: pointer;
+	box-sizing: border-box;
+	transition: 0.3s; }
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+	color: #333;
+	border-color: #888;
+	outline: 0; }
+.button.active,
+button.active,
+input[type="submit"].active,
+input[type="reset"].active,
+input[type="button"].active {
+	background-color: var(--accent-color);
+	color: var(--text-color);
+	border: unset; }
+.button.active:hover,
+button.active:hover,
+input[type="submit"].active:hover,
+input[type="reset"].active:hover,
+input[type="button"].active:hover {
+	background-color: var(--accent-color-dark);
+	color: var(--text-color); }
+.button.active:focus,
+button.active:focus,
+input[type="submit"].active:focus,
+input[type="reset"].active:focus,
+input[type="button"].active:focus {
+	background-color: var(--accent-color-light);
+	color: var(--text-color); }
+button.white {
+	background-color: var(--text-color); }
+button.white:focus, button.white:hover {
+	background-color: var(--text-color-light); }

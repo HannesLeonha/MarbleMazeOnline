@@ -39,6 +39,26 @@
             <div id="level"><p>Level:&nbsp;1/12</p></div>
         </div>
 
+        <div id="endBackdrop" style="opacity: 0; pointer-events: none;"></div>
+
+        <div id="winScreen" style="opacity: 0; pointer-events: none;">
+            <h1>You Win</h1>
+            <p>Congratulations, you beat the game.<br>Try to beat the developer challenge now.</p>
+            <div class="buttonHolder">
+                <button class="active playAgain">Play again</button>
+                <button class="active back">Back</button>
+            </div>
+        </div>
+
+        <div id="trueWinScreen" style="opacity: 0; pointer-events: none;">
+            <h1>True Ending</h1>
+            <p>Thank you for playing my game!<br>You got a time of <span id="winTime"></span>.</p>
+            <div class="buttonHolder">
+                <button class="active playAgain">Play again</button>
+                <button class="active back">Back</button>
+            </div>
+        </div>
+
         <div id="threejsContainer"></div>
     </body>
 </html>

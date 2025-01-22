@@ -1,8 +1,8 @@
-import {setTime} from "./UIManager.js";
+import {completeGame, setTime} from "./UIManager.js";
 
 let timerIsRunning = true;
 
-let bestTime = 186.61;
+let devChallengeTime = 186.61;
 let time = 0;
 
 function updateTimer(delta) {
@@ -19,7 +19,7 @@ function resetTimer() {
 
 function completeRun() {
     timerIsRunning = false;
-    if(time < bestTime) bestTime = time;
+    completeGame(time, time < devChallengeTime);
 }
 
 function setTimerIsRunning(bool) {

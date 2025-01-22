@@ -7,21 +7,23 @@ import {initializeEnvironment} from "./environment/Environment.js";
 import {amountOfLevels, setSize, size, startSize} from "../Constants.js";
 import {completeRun, resetTimer, setTimerIsRunning, time, timerIsRunning, updateTimer} from "./Timer.js";
 import {addInputListener, getAxis} from "../systems/input/InputHandler.js";
-import {setLevelCompletion} from "./UIManager.js";
+import {resetCompletion, setLevelCompletion} from "./UIManager.js";
 
 let gameObject;
 let ballSide = false;
 
-function resetMaze() {
+function resetGame() {
     ballSide = false;
     setSize(startSize);
     setLevelCompletion(1);
     resetTilt();
     setGoalPosition();
     changeMazeSize();
+    setTimerIsRunning(true);
     resetBall();
     setTimerIsRunning(false);
     resetTimer();
+    resetCompletion();
 }
 
 function initializeGameManager() {
@@ -34,10 +36,10 @@ function initializeGameManager() {
     maze.add(initializeGoal());
     gameObject.add(maze);
 
-    resetMaze();
+    resetGame();
 
     addInputListener("Reset", () => {
-        resetMaze();
+        resetGame();
     });
 
     return gameObject;
@@ -77,4 +79,4 @@ function updateGameManager(delta, camera) {
     }
 }
 
-export {initializeGameManager, updateGameManager, ballSide};
+export {initializeGameManager, updateGameManager, resetGame, ballSide};
