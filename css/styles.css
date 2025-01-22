@@ -20,19 +20,8 @@
 }
 
 @font-face {
-    font-family: 'dongle';
-    src: url('../assets/fonts/Dongle.ttf');
-}
-
-@font-face {
 	font-family: 'shareTechMono';
 	src: url('../assets/fonts/ShareTechMono.ttf');
-}
-
-h1 {
-	font-family: dongle, Arial, Helvetica, sans-serif;
-	font-size: 3rem;
-	margin: 0.2rem;
 }
 
 body, html {
@@ -171,6 +160,8 @@ canvas {
 
 #winScreen h1, #trueWinScreen h1 {
 	font-family: shareTechMono, Arial, Helvetica, sans-serif;
+	font-size: 3rem;
+	margin: 0.2rem;
 	text-align: center;
 }
 
