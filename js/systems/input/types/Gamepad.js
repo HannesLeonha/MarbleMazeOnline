@@ -1,3 +1,7 @@
+import { GamepadListener } from 'gamepad.js';
+
+const listener = new GamepadListener();
+
 function isGamepadButtonPressed(button) {
     if(button === "" || navigator.getGamepads()[0] === null) return 0;
 
@@ -26,4 +30,28 @@ function isGamepadButtonPressed(button) {
     return Math.min(Math.max(direction, -1), 1);
 }
 
-export { isGamepadButtonPressed };
+function addGamepadListener(button, callback) {
+    let buttonType = button.charAt(0);
+    let buttonIndex = +button.slice(1);
+
+    switch(buttonType) {
+        case 'A': // Axis
+            listener.on("gamepad:axis", (event) => {
+                if(event.detail.axis === buttonIndex) {
+                    callback(event.detail.value);
+                }
+            });
+
+            break;
+        case 'B': // Button
+            listener.on("gamepad:button", (event) => {
+                if(event.detail.button === buttonIndex) {
+                    callback(event.detail.value);
+                }
+            });
+
+            break;
+    }
+}
+
+export { isGamepadButtonPressed, addGamepadListener };

@@ -26,7 +26,7 @@ document.addEventListener('mousedown', (event) => {
     pressedMouseButtons = event.buttons;
 });
 
-document.addEventListener('blur', (event) => {
+document.addEventListener('blur', () => {
     heldKeys.splice(0, heldKeys.length);
     pressedMouseButtons = 0;
 });
@@ -49,7 +49,7 @@ function addButtonListener(button, callback) {
         if(event.code === button) {
             callback(1);
         }
-    })
+    });
 }
 
 export {isButtonPressed, isMouseButtonPressed, areMouseButtonsPressed, addButtonListener, mousePosition};

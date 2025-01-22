@@ -6,6 +6,10 @@
         {
           "type": "keyboard",
           "key": "Enter"
+        },
+        {
+          "type": "gamepad",
+          "key": "B3"
         }
       ]
     }

@@ -2,7 +2,7 @@ import {setTime} from "./UIManager.js";
 
 let timerIsRunning = true;
 
-let bestTime = 198.84;
+let bestTime = 186.61;
 let time = 0;
 
 function updateTimer(delta) {

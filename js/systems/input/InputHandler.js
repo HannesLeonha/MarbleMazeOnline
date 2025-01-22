@@ -1,5 +1,5 @@
 import {addButtonListener, isButtonPressed, isMouseButtonPressed} from "./types/Keyboard.js";
-import {isGamepadButtonPressed} from "./types/Gamepad.js";
+import {addGamepadListener, isGamepadButtonPressed} from "./types/Gamepad.js";
 
 import keybindings from './keybinds.json';
 const inputs = keybindings.inputs;
@@ -14,7 +14,7 @@ let types = {
     "listener": {
         "keyboard": addButtonListener,
         // "mouse": addMouseButtonListener,
-        // "gamepad": addGamepadListener
+        "gamepad": addGamepadListener
     }
 };
 

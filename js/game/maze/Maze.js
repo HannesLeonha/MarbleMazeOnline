@@ -3,8 +3,6 @@ import {resources} from "../../systems/ResourceManager.js";
 import {floorThickness, matterScale, size, wallHeight, wallThickness} from "../../Constants.js";
 import * as Matter from "matter-js";
 import {Connection, connectionGrid, directions, initializeMaze, scrambleMaze} from "./MazeGenerator.js";
-import {initializeBall, updateBall} from "./Ball.js";
-import {initializeGoal} from "./Goal.js";
 import {addPhysicsBodies, removePhysicsBodies, updateDebugView} from "../PhysicsManager.js";
 import {boardTilt} from "../TiltHandler.js";
 
@@ -56,7 +54,7 @@ function initializeGameMaze() {
     mazeObject.add(floorObject);
 
     // Maze
-    changeMazeSize(size);
+    changeMazeSize();
 
     return mazeObject;
 }

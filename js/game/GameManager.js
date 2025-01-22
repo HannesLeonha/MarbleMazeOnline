@@ -6,11 +6,23 @@ import {checkGoalCollision, initializeGoal, setGoalPosition} from "./maze/Goal.j
 import {initializeEnvironment} from "./environment/Environment.js";
 import {amountOfLevels, setSize, size, startSize} from "../Constants.js";
 import {completeRun, resetTimer, setTimerIsRunning, time, timerIsRunning, updateTimer} from "./Timer.js";
-import {getAxis} from "../systems/input/InputHandler.js";
+import {addInputListener, getAxis} from "../systems/input/InputHandler.js";
 import {setLevelCompletion} from "./UIManager.js";
 
 let gameObject;
 let ballSide = false;
+
+function resetMaze() {
+    ballSide = false;
+    setSize(startSize);
+    setLevelCompletion(1);
+    resetTilt();
+    setGoalPosition();
+    changeMazeSize();
+    resetBall();
+    setTimerIsRunning(false);
+    resetTimer();
+}
 
 function initializeGameManager() {
     gameObject = new THREE.Object3D();
@@ -22,9 +34,11 @@ function initializeGameManager() {
     maze.add(initializeGoal());
     gameObject.add(maze);
 
-    resetTimer();
-    setTimerIsRunning(false);
-    setLevelCompletion(1);
+    resetMaze();
+
+    addInputListener("Reset", () => {
+        resetMaze();
+    });
 
     return gameObject;
 }
