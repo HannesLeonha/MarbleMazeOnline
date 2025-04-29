@@ -12,3 +12,5 @@ To run the project use the command `npm run dev`.
 
 ### Building the project
 Because of the resource manager the project has to be manually built. In order to build it you need to remove the resource manager references and statically add the textures in the Maze.js file. Then you can use `npm run build`. Finally you need to add the contents of the asset folder to the dist folder.
+
+In the future I will remove my unnecessary ResourceManager solution to simplify the build process
