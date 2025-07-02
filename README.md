@@ -1,5 +1,6 @@
 # Marble-Maze Online Project
-This project is the final Three.js project of the IT-HTL Ybbs. The game is obviously inspired by the physical marble-maze games. This take on the classical game was specifically made to be speedrun, so feel free to post your records.
+<img src="https://github.com/HannesLeonha/MarbleMazeOnline/blob/master/docs/assets/hero.png?raw=true" alt="Screenshot of the game"/>
+This project is the final Three.js project for my school. The game is inspired by the physical marble-maze games. This take on the classical game was specifically made to be speedrun, so feel free to post your records.
 
 ## Bugs, suggestions and issues with the project
 If you find any issues related to this project, don't be afraid to e-mail me or create a GitHub-Issue.
